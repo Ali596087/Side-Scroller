@@ -1,10 +1,3 @@
-function setup() {
-  createCanvas(400, 400);
-}
-
-function draw() {
-  background(220);
-}
 // Daniel Shiffman
 // https://www.kadenze.com/courses/the-nature-of-code
 // http://natureofcode.com/
@@ -20,8 +13,8 @@ function setup() {
 }
 
 function keyPressed() {
-  if (key == '') {
-	   var jump = createVector(0, -1);
+  if (key == ' ') {
+	   var jump = createVector(0, -5);
 		 person.applyForce(jump);
 	}
 }
@@ -30,14 +23,15 @@ function keyPressed() {
 function draw() {
   background(51);
 	
+	translate(-person.pos.x+50, 0);
+	
 	var gravity = createVector(0, 0.1);
 	person.applyForce(gravity);
-	
-	translate(-person.pos.x+50, 0);
 	
 	
 		
 	person.update();
+	person.edges();
 	person.display();
   
   fill(255, 0, 100);
