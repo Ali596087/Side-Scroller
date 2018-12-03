@@ -1,1 +1,1 @@
-#### Slide Scroller Assignment
+#### Slide Scroller Assignment By Ali Haydar-Ahmad
